@@ -1,0 +1,110 @@
+
+
+body {
+    background: lightblue;
+
+}
+
+.quiz-title {
+    font-size: 44px;
+    font-weight: bolder;
+
+}
+
+.inside-wrapper {
+    background: darkgray;
+}
+
+.quiz-subtitle {
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#application-quiz-select {
+    font-size: 22px;
+    background: lightgray;
+    margin-bottom: 10px;
+}
+
+.welcome-button {
+   margin-bottom: 40px;
+}
+
+/* quiz screen below  */
+
+.title-quiz {
+    background: lightgray;
+    font-size: 38px;
+    font-weight: bolder;
+    padding: 10px;
+    border: 3px solid black;
+}
+
+.display-question-area {
+    background: lightgray;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 8px;
+    margin-top: 20px;
+}
+
+#display-selected-area {
+    background: lightgray;
+    color: green;
+    height: 30px;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 800px;
+    /* padding: 5px; */
+    margin-top: 12px;
+
+}
+
+#selection-area {
+    background: lightgray;
+    font-size: 22px;
+    font-weight: 800px;
+    padding: 8px;
+    margin-top: 12px;
+    padding-left: 10px;
+}
+
+.radio-button,
+.rbanswer {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.rbanswer:hover {
+    color: blue;
+}
+
+.instructions-quiz {
+    margin-top: 8px;
+
+}
+
+/* results screen below  */
+
+.title-results {
+    background: lightgray;
+    font-size: 38px;
+    font-weight: bolder;
+    padding: 10px;
+    border: 3px solid black;
+}
+
+.result-box {
+    background: lightgray;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 15px;
+
+}
+
+#reset {
+    margin-top: 15px;
+}
