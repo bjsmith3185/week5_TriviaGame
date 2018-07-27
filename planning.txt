@@ -1,0 +1,50 @@
+
+
+have timer start with the "begin" button on welcome screen
+
+- timer will run for 60 seconds
+
+    - if the user finished before 60 seconds
+        - timer is cancelled
+
+    - if the time expires
+        - use the answers in the tempGameArray  
+        - use the lengthofquiz and minus the tempGameArray.length = questions unanswered
+        - determine the grade using, lengthofquiz / (tempGameArray.length + questions unanswered)
+        - display the incorrect answers from tempGameArray
+        - make a function to
+            - display the questions unanswered
+                - will probably need to access the original array to get this info
+
+
+
+===================================
+
+var lengthOfIncompleteQuiz;
+
+
+if user answers 4 questions correctly
+    - tempGameArray will have a length of 5 and 4 correct answers
+        - 6 unanswered questions from examArray;
+
+        grade will be based on 
+
+        for (var i = 0 ; i <tempGameArray.length; i++) {
+            - if (tempGameArray[i].selectedAnswer === undefined) {
+                lengthOfIncompleteQuiz = i;
+            }
+        }
+
+    here i have: 
+    - how many questions are answered = lengthOfIncompleteQuiz
+    - length of total quiz = lengthofquiz
+
+    to display incorrect answers;
+        - tempGameArray with incorrect answers()
+
+        - new for loop to display the remaining quesitons with correct answers
+            for (var i = lengthOfIncompleteQuiz; i < lengthofquiz; i ++) {
+                display the questions
+                display the correct answers 
+                
+            }

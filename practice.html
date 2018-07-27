@@ -49,11 +49,11 @@
 
 
 
-        <!-- display question  -->
-    <div class="row">  
+
+    <div class="row">
         <div class="col-xs-2"></div>
         <div class="col-xs-8 text-center">
-            <div class="display-question-area">What is: 
+            <div class="display-question-area">
                 <!-- <span class="display-question"></span> -->
             </div>
         </div>
@@ -70,8 +70,7 @@
     <div class="row">
         <div class="col-xs-2"></div>
         <div class="col-xs-8">
-            <!-- display choices here  -->
-            <form id="selection-area "></form>
+            <form id="selection-area"></form>
             <h4 class="instructions instructions-quiz text-center">(Select your answer and press Submit.)</h4>
         </div>
     </div>
@@ -96,7 +95,8 @@
         <div class="row">
             <div class="col-xs-1"></div>
             <div class="col-xs-10 ">
-                <div class="result-box">
+                <div class="result-box"> 
+                    <!-- add a span to put the "type" quiz taken  -->
                     <div class="box-head align-left">Quiz results</div>
                     <div class="grade text-center"></div>
                     <div class="display-results"></div>
@@ -106,7 +106,7 @@
 
         <div class="row">
             <div class="col-xs-12 text-center">
-                <button class="btn btn-lg btn-default" id="reset">Reset</button>
+                <button class="btn btn-lg btn-default" id="reset">Main Menu</button>
             </div>
         </div>
     </div>
@@ -117,8 +117,8 @@
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
    
     <script type='text/javascript' src='assets/javascript/questionArray.js'></script>
-    <script type='text/javascript' src='assets/javascript/practice.js'></script>
-    <!-- <script type='text/javascript' src='assets/javascript/temp_css.js'></script> -->
-    <!-- <script type='text/javascript' src='assets/javascript/old_version.js'></script> -->
+    <!-- <script type='text/javascript' src='assets/javascript/practice.js'></script> -->
+    <!-- <script type='text/javascript' src='assets/javascript/main_without_timer.js'></script> -->
+    <script type='text/javascript' src='assets/javascript/main_with_timer.js'></script>
 </body>
 </html>
