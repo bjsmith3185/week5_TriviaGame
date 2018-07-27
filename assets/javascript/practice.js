@@ -1,9 +1,6 @@
 
 
-//==== overAll pick array function ===
-
-
-
+var examArray = [];
 var index = 0; // used to display question in the dom
 var tempGameArray = []; // used to push each answer after it is asked with users answer
 var lengthOfQuiz;
@@ -12,7 +9,7 @@ var selected;  // assigned var on answer submit
 var haveSelected = false;  // state for making sure they selected an answer
 var missedAnswerArray = []; // array to push the incorrect answers
 var randomAnswersArray = []; // used to select 3 "incorrect answers for each question"
-var examArray = [];
+
 //==== answer value from radio buttons in quiz ===
 
 function radioBtnVal(x) {
@@ -29,20 +26,14 @@ $(document).ready(function(){
     $(".quiz-screen").hide();
     $(".result-screen").hide();
 
-
-
-//===== function to make arry for selected application ====
+//===== function to shuffle questions ====
 
 function selectQuizShuffle(arr) {
-
     for (i = 0; i < arr.lenght; i++) {
         examArray.push(arr[i]);
-    }
+    };
     examArray.sort(function (a, b) { return 0.5 - Math.random() });
-    // console.log("this is examArray below")
-    // console.log(examArray);
-   
-}
+};
 
 //===========================================
 
@@ -67,16 +58,13 @@ $("#application-quiz-submit").on("click",function() {
         examArray = javascriptQuiz;
         selectQuizShuffle(javascriptQuiz);
         displayQuestion(index,javacsriptQuiz);
-    }
+    };
    
     $(".welcome").hide()
     $(".quiz-screen").show();
-    // console.log(examArray);
 });
 
 //=============================================
-
-
 
 //===== function to display questions in the dom =====
 function displayQuestion(i, inputArray) {   
@@ -93,22 +81,14 @@ function displayQuestion(i, inputArray) {
     objectForArray.correctAnswer = x.correctAnswer;
     tempGameArray.push(objectForArray);
 
-    // console.log("this is tempGameArray below");
-    // console.log(tempGameArray);
-
-    //==================================
     // display the answers in dom
- 
     for (var i = 0; i < 4; i++) {
-        // console.log("this is incorrect: " + x.incorrectAnswers[i]);
-        var answers = x.incorrectAnswers[i];
+         var answers = x.incorrectAnswers[i];
         $("#selection-area").append("<input type='radio' class='radio-button' onclick='radioBtnVal(this.value)' name='questions' value='" + answers + "' text='" + answers + "'>").append("<span class='rbanswer'> " + answers + "</span>").append("<br>");
     };
-    
 };
 //====== end of function to display answers in the dom =====
 
-//===================================================================================================================
 //======= on click to submit your answer ============
 $("#submit-button").on("click", function () {
     if (haveSelected) {
@@ -172,8 +152,6 @@ function checkAnswers() {
 //===== function to display results ====
 function results() {
     if (missedAnswerArray.length === 0) {
-        // console.log("this is missing" + missedAnswerArray);
-       
         $(".grade").text("100%").addClass("correct text-center");
 
         var correct = $("<div>");
@@ -191,31 +169,26 @@ function results() {
             var userAnswer = $("<span>").attr("class", "result-selected-answer");
             userAnswer.text(missedAnswerArray[i].selectedAnswer);
             userSelectedDiv.append(userAnswer);
-
-            // questionDiv.append(correctDiv).append(userSelectedDiv);
-            $(".display-results").append(questionDiv).append(correctDiv).append(userSelectedDiv);
+            var lineSpace = $("<br><hr>");
+          
+            $(".display-results").append(questionDiv).append(correctDiv).append(userSelectedDiv).append(lineSpace);
         };
-
-        
 
         var grade = 100 - (Math.floor((missedAnswerArray.length / examArray.length) * 100));
         console.log("this is grade: " + grade + "%");
 
             $(".grade").text("You scored " + grade + "%");
-
-
     };
+
     $("#reset").on("click", function () {
-        reset();
-    })
+    reset();
+    });
 };
 //=============================================
 
 //====== function to reset ========
 function reset() {
-    startLength;
-    endLength;
-    ordered = true;
+   
     examArray = [];
     index = 0;
     tempGameArray = [];
@@ -225,10 +198,7 @@ function reset() {
     haveSelected = false;
     missedAnswerArray = [];
     randomAnswersArray = [];
-    answerChoices(quiz);
-    // num = new Array();
-    console.log("This is a new quiz");
-      
+             
     $(".display-question").empty();
     $("#display-selected").empty();
     $("#selection-area").empty();
@@ -239,9 +209,6 @@ function reset() {
     $(".result-screen").hide();
 
 };
-//==================================
-//===================================================================================================================
-
 
 });  // end of document ready
 

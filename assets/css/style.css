@@ -68,7 +68,7 @@ body {
     font-weight: 800px;
     padding: 8px;
     margin-top: 12px;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 .radio-button,
@@ -102,9 +102,50 @@ body {
     font-weight: bold;
     padding: 10px;
     margin-top: 15px;
+}
 
+.correct {
+    color: green;
+    font-size: 40px;
+}
+
+.grade {
+    color: blue;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.display-results {
+    margin-top: 10px;
+   
+}
+
+.result-question {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.result-correct-answer {
+    color: green;
+    font-size: 18px;
+}
+
+.result-selected-answer-title {
+    color: red;
+    font-size: 16px;
+}
+
+.result-selected-answer {
+    color: red;
+    text-decoration: line-through;
+   
+}
+
+.box-head {
+   font-size: 16px;
 }
 
 #reset {
     margin-top: 15px;
+    margin-bottom: 25px;
 }

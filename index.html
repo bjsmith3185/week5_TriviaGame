@@ -51,29 +51,33 @@
 
 
     <div class="row">
-        <div class="col-xs-12 text-center">
-            <div class="display-question-area">What is: <span class="display-question"></span></div>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8 text-center">
+            <div class="display-question-area">
+                <!-- <span class="display-question"></span> -->
+            </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-xs-12 text-center">
-            <div id="display-selected-area"><span id="display-selected"></span></div>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8 text-center">
+            <div id="display-selected-area"><span id="display-selected">your choice</span></div>
+           
         </div>
     </div>
 
     <div class="row">
-        <div class="col-xs-1"></div>
-        <div class="col-xs-11">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8">
             <form id="selection-area"></form>
+            <h4 class="instructions instructions-quiz text-center">(Select your answer and press Submit.)</h4>
         </div>
     </div>
 
     <div class="row">
         <div class="col-xs-12 text-center submit-button">
-                <h4 class="instructions instructions-quiz text-center">(Select your answer and press Submit.)</h4>
-
-                <button class="btn btn-default" id="submit-button">submit</button>
+                <button class="btn btn-lg btn-default" id="submit-button">submit</button>
         </div>
     </div>
 
@@ -81,12 +85,39 @@
 
 <!-- results screen  -->
 
+<div class="result-screen">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <div class="title-results">Your Results</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10 ">
+                <div class="result-box"> 
+                    <!-- add a span to put the "type" quiz taken  -->
+                    <div class="box-head align-left">Quiz results</div>
+                    <div class="grade text-center"></div>
+                    <div class="display-results"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <button class="btn btn-lg btn-default" id="reset">Main Menu</button>
+            </div>
+        </div>
+    </div>
 
 
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script type='text/javascript' src='assets/javascript/practice.js'></script>
+   
     <script type='text/javascript' src='assets/javascript/questionArray.js'></script>
+    <!-- <script type='text/javascript' src='assets/javascript/practice.js'></script> -->
+    <script type='text/javascript' src='assets/javascript/main.js'></script>
 </body>
 </html>
