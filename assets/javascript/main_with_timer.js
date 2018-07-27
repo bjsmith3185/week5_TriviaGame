@@ -73,7 +73,8 @@ function displayQuestion(i, inputArray) {
     var x = inputArray[i];
     console.log("question: " + x.question);
     console.log("this is the answer: " + x.correctAnswer);
-    console.log("these are the choices: " + x.incorrectAnswers);
+    console.log("================");
+    // console.log("these are the choices: " + x.incorrectAnswers);
     $(".display-question-area").text(x.question);
 
     // push the question and correct answer to the temp object
@@ -129,7 +130,7 @@ $("#submit-button").on("click", function () {
 
 //===== function for checking answers ========
 function checkAnswers() {
-          alert("inside checkAnswers()");
+   
     for (var i = 0; i < tempGameArray.length; i++) {
 
         if (tempGameArray[i].selectedAnswer !== tempGameArray[i].correctAnswer) {
@@ -157,7 +158,6 @@ function checkAnswersAfterTimeUp () {
 
     for (var i = 0 ; i <tempGameArray.length; i++) {  // gets length of how many were answered
         if (tempGameArray[i].selectedAnswer === undefined) {
-          
             lengthOfIncompleteQuiz = i -1;
         };
     };
@@ -201,6 +201,12 @@ function checkAnswersAfterTimeUp () {
             
                 $(".display-results").append(questionDiv).append(correctDiv).append(userSelectedDiv).append(lineSpace);
             };
+
+        // grade displayed in the dom
+
+        var grade = 100 - (Math.floor(((missedAnswerArray.length + (examArray.length -(lengthOfIncompleteQuiz + 1) ) )/ examArray.length) * 100));
+        
+        $(".grade").text("You scored " + grade + "%");
 };  
 
 
@@ -230,8 +236,7 @@ function results() {
         };
 
         var grade = 100 - (Math.floor((missedAnswerArray.length / examArray.length) * 100));
-        console.log("this is grade: " + grade + "%");
-
+       
             $(".grade").text("You scored " + grade + "%");
     };
 
