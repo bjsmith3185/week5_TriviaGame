@@ -48,3 +48,51 @@ if user answers 4 questions correctly
                 display the correct answers 
                 
             }
+
+
+====================================
+&lt;    &amp;
+
+css questions
+
+Which is not a selector
+image
+class  id  tag
+
+
+where would you put the <style> in html?          &lt;dom&amp;
+<head>
+<body> <script> <dom>
+
+what is the syntax for pseudo element
+::
+;; ! ??
+
+when would you use !important
+only if you have to
+each line  important sections  to make bold
+
+what is a good way to understand css?
+box model
+read the api docs  use bootstrap  dont use css 
+
+
+what is a way to size a font
+em 
+big lg er
+
+what best describes media query
+responsive
+local host background
+
+what does a css reset do 
+clears any predefined settings
+freshens it up   closes the window  sets font color
+
+which is a css preprocessor 
+LESS
+MORE FEW HUGE
+
+CSS stands for
+Cascading Style Sheets
+Cool StyleS  Computer Style Sheet  Cats Swim Swiftly
